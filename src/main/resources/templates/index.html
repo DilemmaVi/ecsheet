@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于Luckysheet的在线表格</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" /><!--CSS RESET-->
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>基于Luckysheet的在线表格 </h1>
+				<a  href="https://github.com/mengshukeji/Luckysheet" title="Luckysheet" target="_blank"><span>友情链接： Luckysheet</span></a>
+		</header>
+		<h1>后端语言：JAVA</h1>
+<p class="sub">技术栈：Springboot + MongoDB + FreeMarker</p>
+
+<main id=app>
+  
+  <mochi-box shiba="random">
+	  <h3>
+		  新建表格
+	  </h3>
+	  <a href="/index/create"> <img src="img/create.png" /></a>
+  </mochi-box>
+
+    <#list all as wb>
+
+  <mochi-box shiba="random" >
+    <h3>
+      <a target="_blank" href="/index/${wb.id}">${wb.option.title}</a>
+    </h3>
+	  <a target="_blank" href="/index/${wb.id}"> <img src="img/excel.png" /></a>
+  </mochi-box>
+  </#list>
+  
+
+
+  
+</main>
+
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+	<script  src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head lang='zh'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0"/>
+    <title>websocket--luckysheet</title>
+
+    <link rel='stylesheet' href='/lib/plugins/css/pluginsCss.css'/>
+    <link rel='stylesheet' href='/lib/plugins/plugins.css'/>
+    <link rel='stylesheet' href='/lib/css/luckysheet.css'/>
+    <link rel='stylesheet' href='/lib/assets/iconfont/iconfont.css'/>
+    <script src="/lib/plugins/js/plugin.js"></script>
+    <script src="/lib/luckysheet.umd.js"></script>
+</head>
+
+<body>
+
+<div id="${wb.option.container}"
+     style="margin:0px;padding:0px;position:absolute;width:100%;height:100%;left: 0px;top: 0px;"></div>
+
+</div>
+</body>
+<script>
+
+    var localurl =  "//" + window.location.host;
+
+    // 配置项
+    var options = {
+        container: "${wb.option.container}", // 设定DOM容器的id
+        title: "${wb.option.title}", // 设定表格名称
+        lang: "${wb.option.lang}",
+        allowUpdate: true,
+        loadUrl: window.location.protocol + localurl + "/load/${wb.id}",
+        loadSheetUrl: window.location.protocol + localurl + "/loadSheet/${wb.id}",
+        updateUrl: "ws://"+localurl + "/ws/" + Math.round(Math.random() * 100) + "/${wb.id}"
+        // 更多其他设置...
+    }
+
+    // 初始化表格
+    luckysheet.create(options)
+
+
+</script>
+</html>

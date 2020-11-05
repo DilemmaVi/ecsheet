@@ -1,0 +1,496 @@
+.MochiShiba,
+.MochiPaws {
+  path {
+    fill: none;
+    stroke: none;
+    stroke-width: 1.2;
+    stroke-miterlimit: 10;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .thin {
+    stroke-width: 0.8;
+  }
+  #eyes path { 
+    stroke-width: 2; 
+  }
+  
+  .fur { fill: #dd9e47; }
+  .fur2 { fill: white; }
+  .inner { fill: white; }
+  .outline { stroke: #4e2e0f; }
+  .nose, .eye { fill: #3c2012; }
+  .gleam { fill: white; }
+  #laugh .eye { fill: none; }
+  .tongue { fill: #f2a3ad; }
+  .drool { fill: #41b5dd; }
+  .scarf { fill: #002a57; }
+  .logo { fill: white; }
+  #cheeks {
+    .right { fill: url(#cheeks); }
+    .left { fill: url(#cheeks-2); }
+  }
+}
+
+.MochiShiba {
+  #cheeks {
+    visibility: hidden;
+  }
+  #ears {
+    #left1,
+    #right2,
+    #left3,
+    #right3 {
+      visibility: hidden;
+    }
+  }
+  #eyes {
+    #wink,
+    #shy,
+    #laugh,
+    .gleam {
+      visibility: hidden;
+    }
+  }
+  #brows {
+    #expecting {
+      visibility: hidden;
+    }
+  }
+  [id^=mouth] {
+    visibility: hidden;
+  }
+  [id^=mouth1] {
+    visibility: visible;
+  }
+  #base {
+    #outline2,
+    #outline3 {
+      visibility: hidden;
+    }
+    #top2,
+    #top3 {
+      visibility: hidden;
+    }
+  }
+}
+
+.MochiShiba {
+  &.blush {
+    #cheeks { visibility: visible }
+  }
+  &.content {
+    [id^=mouth] { visibility: hidden; }
+  }
+  &.happy {
+    [id^=mouth] { visibility: hidden; }
+    #mouth2 { visibility: visible; }
+  }
+  &.excited {
+    [id^=mouth] { visibility: hidden; }
+    #mouth3 { visibility: visible; }
+  }
+  &.cute {
+    #brows {
+      #expecting { visibility: visible; }
+      #focussed { visibility: hidden; }
+    }
+    [id^=mouth] { visibility: hidden; }
+    #mouth4 { visibility: visible; }
+  }
+  &.drool {
+    [id^=mouth] { visibility: hidden; }
+    #mouth5 { visibility: visible }
+  }
+  &.cheeky {
+    [id^=mouth] { visibility: hidden; }
+    #mouth6 { visibility: visible; }
+  }
+  &.gleam {
+    #brows {
+      #expecting { visibility: visible; }
+      #focussed { visibility: hidden; }
+    }
+    #snout { transform: translateY(-3%); }
+    #brows { transform: translateY(-5%); }
+    #eyes { transform: translateY(-4.5%); }
+    #eyes #open .eye.left { transform: matrix(0.7, -0.7, 0.7, 0.7, -31.2, 54.3 ) scale(1.2); }
+    #eyes #open .eye.right { transform: translate(-27.5px,83px) rotate(-42.36deg) scale(1.2); }
+    #cheeks { transform: translateY(-4%); }
+    [id^=mouth] { visibility: hidden; }
+    #mouth1 { visibility: visible; }
+  }
+  &.ears #ears > g { visibility: hidden; }
+  &.ears.l1 #ears > #left1 { visibility: visible; }
+  &.ears.l2 #ears > #left2 { visibility: visible; }
+  &.ears.l3 #ears > #left3 { visibility: visible; }
+  &.ears.l4 #ears > #left4 { visibility: visible; }
+  &.ears.r1 #ears > #right1 { visibility: visible; }
+  &.ears.r2 #ears > #right2 { visibility: visible; }
+  &.ears.r3 #ears > #right3 { visibility: visible; }
+  &.ears.r4 #ears > #right4 { visibility: visible; }
+  &.ears { 
+    #base [id^=outline], 
+    #base [id^=top] { visibility: hidden; }
+    &.l1.r1,
+    &.l4.r4 {
+      #base #outline2,
+      #base #top2 { visibility: visible; }
+    }
+    &.l1.r2,
+    &.l1.r4 {
+      #base #outline1,
+      #base #top2 { visibility: visible; }
+    }
+    &.l1.r3 {
+      #base #outline3,
+      #base #top3 { visibility: visible; }
+    }
+    &.l2.r1,
+    &.l4.r1 {
+      #base #outline1,
+      #base #top1 { visibility: visible; }
+    }
+    &.l2.r2,
+    &.l4.r2,
+    &.l2.r4 {
+      #base #outline1,
+      #base #top2 { visibility: visible; }
+    }
+    &.l2.r3,
+    &.l4.r3 {
+      #base #outline3,
+      #base #top3 { visibility: visible; }
+    }
+    &.l3.r1 {
+      #base #outline2,
+      #base #top1 { visibility: visible; }
+    }
+    &.l3.r2 {
+      #base #outline1,
+      #base #top1 { visibility: visible; }
+    }
+    &.l3.r4 {
+      #base #outline1,
+      #base #top2 { visibility: visible; }
+    }
+    &.l3.r3 {
+      #base #outline3,
+      #base #top3 { visibility: visible; }
+    }
+  }
+  &.eyes #eyes .eye { visibility: hidden; }
+  &.eyes.open #open .eye.left,
+  &.eyes.lopen #open .eye.left { visibility: visible; }
+  &.eyes.open #open .eye.right,
+  &.eyes.ropen #open .eye.right { visibility: visible; }
+  &.eyes.wink #wink .eye.left,
+  &.eyes.lwink #wink .eye.left { visibility: visible; }
+  &.eyes.wink #wink .eye.right,
+  &.eyes.rwink #wink .eye.right { visibility: visible; }
+  &.eyes.laugh #laugh .eye.left,
+  &.eyes.llaugh #laugh .eye.left { visibility: visible; }
+  &.eyes.laugh #laugh .eye.right,
+  &.eyes.rlaugh #laugh .eye.right { visibility: visible; }
+  &.eyes.shy #shy .eye.left,
+  &.eyes.lshy #shy .eye.left { visibility: visible; }
+  &.eyes.shy #shy .eye.right,
+  &.eyes.rshy #shy .eye.right { visibility: visible; }
+  &.eyes.open.gleam #open .gleam,
+  &.eyes.lopen.gleam #open .gleam.left { visibility: visible; }
+  &.eyes.ropen.gleam #open .gleam.right { visibility: visible; }
+}
+
+.ume {
+  .fur { fill: white; }
+  .fur2 { fill: white; }
+  .inner { fill: #f9c7bd; }
+  #brows .fur2 { fill: #f7d6b9; }
+  .scarf { fill: #b3122d; }
+}
+
+.sesame {
+  .outline { stroke: #3c2012; }
+  .fur { fill: #140d0b; }
+  .fur2 { fill: #e8c6ac; }
+  .inner { fill: #e8c6ac; }
+}
+
+.monaka {
+  .fur { fill: #d7b087; }
+  .scarf { fill: #6b9dc4; }
+}
+
+.sakura {
+  .fur { fill: #fcdacd; }
+  .inner { fill: #f1aeb3; }
+  .scarf { fill: #f2a3ad; }
+}
+
+.kinako {
+  .fur { fill: #fdecc0; }
+  .scarf { fill: #356320; }
+}
+
+.anko {
+  .fur { fill: #ac8569; }
+  .scarf { fill: #356320; }
+}
+
+.tuna {
+  .outline { stroke: #3c2012; }
+  .fur { fill: #603d1e; }
+  .fur2 { fill: #fad4af; }
+  .inner { fill: #fad4af; }
+  .eye { fill: #3c2012; }
+}
+
+.MochiBox {
+  &.pop,
+  &:hover,
+  &:active,
+  &:focus {
+    .paws {
+      animation: paw-pop 0.3s ease 1 both;
+    }
+    .shiba {
+      animation: shiba-pop 1s ease 1 both;
+    }
+    .eyes.open:not(.cheeky):not(.gleam) {
+      [id^=mouth] {
+        animation: shiba-wink-open 10s infinite linear both;
+      }
+      #mouth6 { 
+        visibility: visible; 
+        animation: shiba-wink-closed 10s infinite linear both;
+      }
+      #open .left {
+        animation: shiba-wink-open 10s infinite linear both;
+      }
+      #wink .eye.left { 
+        visibility: visible;
+        animation: shiba-wink-closed 10s infinite linear both; 
+      }
+    }
+  }
+}
+
+
+.MochiBox {
+  display: inline-block;
+  vertical-align: top;
+  position: relative; 
+  margin: 40px 20px 10px 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px 4px #f8f0e8;
+  user-select: none;
+  z-index: 0;
+  .MochiShiba {
+    z-index: 0;
+  }
+  .MochiPaws {
+    z-index: 2;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    .MochiContent {
+      border-color: #5f3d1e;
+    }
+  }
+  .MochiContent {
+    z-index: 1;
+    position: relative;
+    min-width: 200px;
+    min-height: 200px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #f0e0d1;
+    border-radius: 20px;
+    transition: border 0.5s ease;
+  }
+}
+
+.MochiShiba,
+.MochiPaws {
+  position: absolute;
+  left: 12.5%;
+  top: 0;
+  pointer-events: none;
+  width: 75%;
+  max-width: 200px;
+  &.small {
+    max-width: 100px;
+  }
+  &.large {
+    max-width: 300px;
+  }
+  .shiba {
+    width: 100%;
+    height: auto;
+    transform: translateY(-54%);
+    animation: shiba-hide 0.5s ease 1 both;
+    transform-origin: bottom center;
+  }
+  .paws {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-60%);
+    animation: paw-hide 0.25s ease 1 both;
+  }
+}
+
+
+
+@keyframes paw-hide {
+  100% {
+    opacity: 0;
+    transform: translateY(-65%) scale(0.9);
+  }
+}
+@keyframes paw-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-70%);
+  }
+  100% {
+    transform: translateY(-60%) scaleY(1);
+  }
+}
+
+@keyframes shiba-hide {
+  0% {
+    opacity: 1;
+    transform: translateY(-54%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0%) scale(0.5);
+  }
+}
+@keyframes shiba-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(0%) scale(0.5);
+  }
+  22% {
+    opacity: 1;
+    transform: translateY(-25%) scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-64%) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-54%) scale(1.01);
+  }
+}
+
+@keyframes shiba-wink-open {
+  0% { opacity: 1; }
+  6% { opacity: 1; }
+  7% { opacity: 0; }
+  12% { opacity: 0; }
+  13% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes shiba-wink-closed {
+  0% { opacity: 0; }
+  6% { opacity: 0; }
+  7% { opacity: 1; }
+  12% { opacity: 1; }
+  13% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+
+body {
+  color: #5f3d1e;
+  background: #fdfbee;
+  padding: 20px;
+  font-family: "Baloo", cursive;
+}
+  
+h2 {
+  font-size: 20px;
+  margin: 5px 0 0;
+  font-weight: 600;
+  font-family: "Kosugi Maru";
+}
+  
+h3 {
+  font-size: 32px;
+  margin: 0 0 5px;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  line-height: 0.8;
+}
+
+p, h1 {
+  margin: 5px 0;
+}
+h1 {
+  line-height: 0.7;
+}
+
+p.shop {
+  background: #002a57;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-family: "Kosugi Maru";
+  padding: 3px 6px;
+  &.uemachi {
+    background: #356320;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &.show,
+  &:hover {
+    color: #002a57;
+  }
+}
+
+.sub {
+  font-family: Arial;
+}
+
+button {
+  color: #301d0b;
+  margin-top: 50px;
+  background: #c2ab96;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-family: monaco, consolas, "courier new", monospace;
+  cursor: pointer;
+  &:hover {
+    border-color: #5f3d1e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,741 @@
+.MochiShiba path,
+.MochiPaws path {
+  fill: none;
+  stroke: none;
+  stroke-width: 1.2;
+  stroke-miterlimit: 10;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.MochiShiba .thin,
+.MochiPaws .thin {
+  stroke-width: 0.8;
+}
+.MochiShiba #eyes path,
+.MochiPaws #eyes path {
+  stroke-width: 2;
+}
+.MochiShiba .fur,
+.MochiPaws .fur {
+  fill: #dd9e47;
+}
+.MochiShiba .fur2,
+.MochiPaws .fur2 {
+  fill: white;
+}
+.MochiShiba .inner,
+.MochiPaws .inner {
+  fill: white;
+}
+.MochiShiba .outline,
+.MochiPaws .outline {
+  stroke: #4e2e0f;
+}
+.MochiShiba .nose, .MochiShiba .eye,
+.MochiPaws .nose,
+.MochiPaws .eye {
+  fill: #3c2012;
+}
+.MochiShiba .gleam,
+.MochiPaws .gleam {
+  fill: white;
+}
+.MochiShiba #laugh .eye,
+.MochiPaws #laugh .eye {
+  fill: none;
+}
+.MochiShiba .tongue,
+.MochiPaws .tongue {
+  fill: #f2a3ad;
+}
+.MochiShiba .drool,
+.MochiPaws .drool {
+  fill: #41b5dd;
+}
+.MochiShiba .scarf,
+.MochiPaws .scarf {
+  fill: #002a57;
+}
+.MochiShiba .logo,
+.MochiPaws .logo {
+  fill: white;
+}
+.MochiShiba #cheeks .right,
+.MochiPaws #cheeks .right {
+  fill: url(#cheeks);
+}
+.MochiShiba #cheeks .left,
+.MochiPaws #cheeks .left {
+  fill: url(#cheeks-2);
+}
+
+.MochiShiba #cheeks {
+  visibility: hidden;
+}
+.MochiShiba #ears #left1,
+.MochiShiba #ears #right2,
+.MochiShiba #ears #left3,
+.MochiShiba #ears #right3 {
+  visibility: hidden;
+}
+.MochiShiba #eyes #wink,
+.MochiShiba #eyes #shy,
+.MochiShiba #eyes #laugh,
+.MochiShiba #eyes .gleam {
+  visibility: hidden;
+}
+.MochiShiba #brows #expecting {
+  visibility: hidden;
+}
+.MochiShiba [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba [id^=mouth1] {
+  visibility: visible;
+}
+.MochiShiba #base #outline2,
+.MochiShiba #base #outline3 {
+  visibility: hidden;
+}
+.MochiShiba #base #top2,
+.MochiShiba #base #top3 {
+  visibility: hidden;
+}
+
+.MochiShiba.blush #cheeks {
+  visibility: visible;
+}
+.MochiShiba.content [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.happy [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.happy #mouth2 {
+  visibility: visible;
+}
+.MochiShiba.excited [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.excited #mouth3 {
+  visibility: visible;
+}
+.MochiShiba.cute #brows #expecting {
+  visibility: visible;
+}
+.MochiShiba.cute #brows #focussed {
+  visibility: hidden;
+}
+.MochiShiba.cute [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.cute #mouth4 {
+  visibility: visible;
+}
+.MochiShiba.drool [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.drool #mouth5 {
+  visibility: visible;
+}
+.MochiShiba.cheeky [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.cheeky #mouth6 {
+  visibility: visible;
+}
+.MochiShiba.gleam #brows #expecting {
+  visibility: visible;
+}
+.MochiShiba.gleam #brows #focussed {
+  visibility: hidden;
+}
+.MochiShiba.gleam #snout {
+  -webkit-transform: translateY(-3%);
+          transform: translateY(-3%);
+}
+.MochiShiba.gleam #brows {
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+.MochiShiba.gleam #eyes {
+  -webkit-transform: translateY(-4.5%);
+          transform: translateY(-4.5%);
+}
+.MochiShiba.gleam #eyes #open .eye.left {
+  -webkit-transform: matrix(0.7, -0.7, 0.7, 0.7, -31.2, 54.3) scale(1.2);
+          transform: matrix(0.7, -0.7, 0.7, 0.7, -31.2, 54.3) scale(1.2);
+}
+.MochiShiba.gleam #eyes #open .eye.right {
+  -webkit-transform: translate(-27.5px, 83px) rotate(-42.36deg) scale(1.2);
+          transform: translate(-27.5px, 83px) rotate(-42.36deg) scale(1.2);
+}
+.MochiShiba.gleam #cheeks {
+  -webkit-transform: translateY(-4%);
+          transform: translateY(-4%);
+}
+.MochiShiba.gleam [id^=mouth] {
+  visibility: hidden;
+}
+.MochiShiba.gleam #mouth1 {
+  visibility: visible;
+}
+.MochiShiba.ears #ears > g {
+  visibility: hidden;
+}
+.MochiShiba.ears.l1 #ears > #left1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2 #ears > #left2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3 #ears > #left3 {
+  visibility: visible;
+}
+.MochiShiba.ears.l4 #ears > #left4 {
+  visibility: visible;
+}
+.MochiShiba.ears.r1 #ears > #right1 {
+  visibility: visible;
+}
+.MochiShiba.ears.r2 #ears > #right2 {
+  visibility: visible;
+}
+.MochiShiba.ears.r3 #ears > #right3 {
+  visibility: visible;
+}
+.MochiShiba.ears.r4 #ears > #right4 {
+  visibility: visible;
+}
+.MochiShiba.ears #base [id^=outline],
+.MochiShiba.ears #base [id^=top] {
+  visibility: hidden;
+}
+.MochiShiba.ears.l1.r1 #base #outline2,
+.MochiShiba.ears.l1.r1 #base #top2, .MochiShiba.ears.l4.r4 #base #outline2,
+.MochiShiba.ears.l4.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l1.r2 #base #outline1,
+.MochiShiba.ears.l1.r2 #base #top2, .MochiShiba.ears.l1.r4 #base #outline1,
+.MochiShiba.ears.l1.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l1.r3 #base #outline3,
+.MochiShiba.ears.l1.r3 #base #top3 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2.r1 #base #outline1,
+.MochiShiba.ears.l2.r1 #base #top1, .MochiShiba.ears.l4.r1 #base #outline1,
+.MochiShiba.ears.l4.r1 #base #top1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2.r2 #base #outline1,
+.MochiShiba.ears.l2.r2 #base #top2, .MochiShiba.ears.l4.r2 #base #outline1,
+.MochiShiba.ears.l4.r2 #base #top2, .MochiShiba.ears.l2.r4 #base #outline1,
+.MochiShiba.ears.l2.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l2.r3 #base #outline3,
+.MochiShiba.ears.l2.r3 #base #top3, .MochiShiba.ears.l4.r3 #base #outline3,
+.MochiShiba.ears.l4.r3 #base #top3 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r1 #base #outline2,
+.MochiShiba.ears.l3.r1 #base #top1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r2 #base #outline1,
+.MochiShiba.ears.l3.r2 #base #top1 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r4 #base #outline1,
+.MochiShiba.ears.l3.r4 #base #top2 {
+  visibility: visible;
+}
+.MochiShiba.ears.l3.r3 #base #outline3,
+.MochiShiba.ears.l3.r3 #base #top3 {
+  visibility: visible;
+}
+.MochiShiba.eyes #eyes .eye {
+  visibility: hidden;
+}
+.MochiShiba.eyes.open #open .eye.left, .MochiShiba.eyes.lopen #open .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.open #open .eye.right, .MochiShiba.eyes.ropen #open .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.wink #wink .eye.left, .MochiShiba.eyes.lwink #wink .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.wink #wink .eye.right, .MochiShiba.eyes.rwink #wink .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.laugh #laugh .eye.left, .MochiShiba.eyes.llaugh #laugh .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.laugh #laugh .eye.right, .MochiShiba.eyes.rlaugh #laugh .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.shy #shy .eye.left, .MochiShiba.eyes.lshy #shy .eye.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.shy #shy .eye.right, .MochiShiba.eyes.rshy #shy .eye.right {
+  visibility: visible;
+}
+.MochiShiba.eyes.open.gleam #open .gleam, .MochiShiba.eyes.lopen.gleam #open .gleam.left {
+  visibility: visible;
+}
+.MochiShiba.eyes.ropen.gleam #open .gleam.right {
+  visibility: visible;
+}
+
+.ume .fur {
+  fill: white;
+}
+.ume .fur2 {
+  fill: white;
+}
+.ume .inner {
+  fill: #f9c7bd;
+}
+.ume #brows .fur2 {
+  fill: #f7d6b9;
+}
+.ume .scarf {
+  fill: #b3122d;
+}
+
+.sesame .outline {
+  stroke: #3c2012;
+}
+.sesame .fur {
+  fill: #140d0b;
+}
+.sesame .fur2 {
+  fill: #e8c6ac;
+}
+.sesame .inner {
+  fill: #e8c6ac;
+}
+
+.monaka .fur {
+  fill: #d7b087;
+}
+.monaka .scarf {
+  fill: #6b9dc4;
+}
+
+.sakura .fur {
+  fill: #fcdacd;
+}
+.sakura .inner {
+  fill: #f1aeb3;
+}
+.sakura .scarf {
+  fill: #f2a3ad;
+}
+
+.kinako .fur {
+  fill: #fdecc0;
+}
+.kinako .scarf {
+  fill: #356320;
+}
+
+.anko .fur {
+  fill: #ac8569;
+}
+.anko .scarf {
+  fill: #356320;
+}
+
+.tuna .outline {
+  stroke: #3c2012;
+}
+.tuna .fur {
+  fill: #603d1e;
+}
+.tuna .fur2 {
+  fill: #fad4af;
+}
+.tuna .inner {
+  fill: #fad4af;
+}
+.tuna .eye {
+  fill: #3c2012;
+}
+
+.MochiBox.pop .paws, .MochiBox:hover .paws, .MochiBox:active .paws, .MochiBox:focus .paws {
+  -webkit-animation: paw-pop 0.3s ease 1 both;
+          animation: paw-pop 0.3s ease 1 both;
+}
+.MochiBox.pop .shiba, .MochiBox:hover .shiba, .MochiBox:active .shiba, .MochiBox:focus .shiba {
+  -webkit-animation: shiba-pop 1s ease 1 both;
+          animation: shiba-pop 1s ease 1 both;
+}
+.MochiBox.pop .eyes.open:not(.cheeky):not(.gleam) [id^=mouth], .MochiBox:hover .eyes.open:not(.cheeky):not(.gleam) [id^=mouth], .MochiBox:active .eyes.open:not(.cheeky):not(.gleam) [id^=mouth], .MochiBox:focus .eyes.open:not(.cheeky):not(.gleam) [id^=mouth] {
+  -webkit-animation: shiba-wink-open 10s infinite linear both;
+          animation: shiba-wink-open 10s infinite linear both;
+}
+.MochiBox.pop .eyes.open:not(.cheeky):not(.gleam) #mouth6, .MochiBox:hover .eyes.open:not(.cheeky):not(.gleam) #mouth6, .MochiBox:active .eyes.open:not(.cheeky):not(.gleam) #mouth6, .MochiBox:focus .eyes.open:not(.cheeky):not(.gleam) #mouth6 {
+  visibility: visible;
+  -webkit-animation: shiba-wink-closed 10s infinite linear both;
+          animation: shiba-wink-closed 10s infinite linear both;
+}
+.MochiBox.pop .eyes.open:not(.cheeky):not(.gleam) #open .left, .MochiBox:hover .eyes.open:not(.cheeky):not(.gleam) #open .left, .MochiBox:active .eyes.open:not(.cheeky):not(.gleam) #open .left, .MochiBox:focus .eyes.open:not(.cheeky):not(.gleam) #open .left {
+  -webkit-animation: shiba-wink-open 10s infinite linear both;
+          animation: shiba-wink-open 10s infinite linear both;
+}
+.MochiBox.pop .eyes.open:not(.cheeky):not(.gleam) #wink .eye.left, .MochiBox:hover .eyes.open:not(.cheeky):not(.gleam) #wink .eye.left, .MochiBox:active .eyes.open:not(.cheeky):not(.gleam) #wink .eye.left, .MochiBox:focus .eyes.open:not(.cheeky):not(.gleam) #wink .eye.left {
+  visibility: visible;
+  -webkit-animation: shiba-wink-closed 10s infinite linear both;
+          animation: shiba-wink-closed 10s infinite linear both;
+}
+
+.MochiBox {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 40px 20px 10px 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px 4px #f8f0e8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 0;
+}
+.MochiBox .MochiShiba {
+  z-index: 0;
+}
+.MochiBox .MochiPaws {
+  z-index: 2;
+}
+.MochiBox:hover, .MochiBox:active, .MochiBox:focus {
+  outline: none;
+}
+.MochiBox:hover .MochiContent, .MochiBox:active .MochiContent, .MochiBox:focus .MochiContent {
+  border-color: #5f3d1e;
+}
+.MochiBox .MochiContent {
+  z-index: 1;
+  position: relative;
+  min-width: 200px;
+  min-height: 200px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #f0e0d1;
+  border-radius: 20px;
+  transition: border 0.5s ease;
+}
+
+.MochiShiba,
+.MochiPaws {
+  position: absolute;
+  left: 12.5%;
+  top: 0;
+  pointer-events: none;
+  width: 75%;
+  max-width: 200px;
+}
+.MochiShiba.small,
+.MochiPaws.small {
+  max-width: 100px;
+}
+.MochiShiba.large,
+.MochiPaws.large {
+  max-width: 300px;
+}
+.MochiShiba .shiba,
+.MochiPaws .shiba {
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateY(-54%);
+          transform: translateY(-54%);
+  -webkit-animation: shiba-hide 0.5s ease 1 both;
+          animation: shiba-hide 0.5s ease 1 both;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+.MochiShiba .paws,
+.MochiPaws .paws {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
+  -webkit-animation: paw-hide 0.25s ease 1 both;
+          animation: paw-hide 0.25s ease 1 both;
+}
+
+@-webkit-keyframes paw-hide {
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-65%) scale(0.9);
+            transform: translateY(-65%) scale(0.9);
+  }
+}
+
+@keyframes paw-hide {
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-65%) scale(0.9);
+            transform: translateY(-65%) scale(0.9);
+  }
+}
+@-webkit-keyframes paw-pop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%) scale(0.75);
+            transform: translateY(-50%) scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-70%);
+            transform: translateY(-70%);
+  }
+  100% {
+    -webkit-transform: translateY(-60%) scaleY(1);
+            transform: translateY(-60%) scaleY(1);
+  }
+}
+@keyframes paw-pop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-50%) scale(0.75);
+            transform: translateY(-50%) scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-70%);
+            transform: translateY(-70%);
+  }
+  100% {
+    -webkit-transform: translateY(-60%) scaleY(1);
+            transform: translateY(-60%) scaleY(1);
+  }
+}
+@-webkit-keyframes shiba-hide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(-54%) scale(1);
+            transform: translateY(-54%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0%) scale(0.5);
+            transform: translateY(0%) scale(0.5);
+  }
+}
+@keyframes shiba-hide {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(-54%) scale(1);
+            transform: translateY(-54%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0%) scale(0.5);
+            transform: translateY(0%) scale(0.5);
+  }
+}
+@-webkit-keyframes shiba-pop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0%) scale(0.5);
+            transform: translateY(0%) scale(0.5);
+  }
+  22% {
+    opacity: 1;
+    -webkit-transform: translateY(-25%) scale(0.5);
+            transform: translateY(-25%) scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-64%) scale(1.01);
+            transform: translateY(-64%) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-54%) scale(1.01);
+            transform: translateY(-54%) scale(1.01);
+  }
+}
+@keyframes shiba-pop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0%) scale(0.5);
+            transform: translateY(0%) scale(0.5);
+  }
+  22% {
+    opacity: 1;
+    -webkit-transform: translateY(-25%) scale(0.5);
+            transform: translateY(-25%) scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-64%) scale(1.01);
+            transform: translateY(-64%) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-54%) scale(1.01);
+            transform: translateY(-54%) scale(1.01);
+  }
+}
+@-webkit-keyframes shiba-wink-open {
+  0% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shiba-wink-open {
+  0% {
+    opacity: 1;
+  }
+  6% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes shiba-wink-closed {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes shiba-wink-closed {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 0;
+  }
+  7% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 1;
+  }
+  13% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body {
+  color: #5f3d1e;
+  background: #fdfbee;
+  padding: 20px;
+  font-family: "Baloo", cursive;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 5px 0 0;
+  font-weight: 600;
+  font-family: "Kosugi Maru";
+}
+
+h3 {
+  font-size: 32px;
+  margin: 0 0 5px;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  line-height: 0.8;
+}
+
+p, h1 {
+  margin: 5px 0;
+}
+
+h1 {
+  line-height: 0.7;
+}
+
+p.shop {
+  background: #002a57;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-family: "Kosugi Maru";
+  padding: 3px 6px;
+}
+p.shop.uemachi {
+  background: #356320;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a.show, a:hover {
+  color: #002a57;
+}
+
+.sub {
+  font-family: Arial;
+}
+
+button {
+  color: #301d0b;
+  margin-top: 50px;
+  background: #c2ab96;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-family: monaco, consolas, "courier new", monospace;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #5f3d1e;
+}
+
+* {
+  box-sizing: border-box;
+}
