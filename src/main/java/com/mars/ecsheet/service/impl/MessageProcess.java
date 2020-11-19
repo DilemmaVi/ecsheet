@@ -274,7 +274,7 @@ public class MessageProcess implements IMessageProcess {
      * @return
      */
     private WorkSheetEntity calcChainRefresh(WorkSheetEntity ws, JSONObject message) {
-        String value = message.getJSONObject("v").toString();
+        JSONObject value = message.getJSONObject("v");
         if (!ws.getData().containsKey("calcChain")) {
             ws.getData().put("calcChain", new JSONArray());
         }
