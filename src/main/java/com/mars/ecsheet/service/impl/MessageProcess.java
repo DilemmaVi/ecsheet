@@ -444,7 +444,6 @@ public class MessageProcess implements IMessageProcess {
     private WorkSheetEntity shaRefresh(String wbId, JSONObject message) {
         WorkSheetEntity ws = new WorkSheetEntity();
         ws.setWbId(wbId);
-        ws.setId(IdUtil.simpleUUID());
         ws.setData(message.getJSONObject("v"));
         return ws;
     }
@@ -460,7 +459,6 @@ public class MessageProcess implements IMessageProcess {
     private WorkSheetEntity shcRefresh(WorkSheetEntity ws, JSONObject message) {
 
         String index = message.getStr("i");
-        ws.setId(IdUtil.simpleUUID());
         ws.getData().put("index", index);
         ws.getData().put("name", message.getJSONObject("v").getStr("name"));
 

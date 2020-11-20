@@ -19,11 +19,11 @@ public interface WorkSheetRepository extends MongoRepository<WorkSheetEntity,Str
     @Query(value = "{'wbId':?0,'deleteStatus':0}")
     List<WorkSheetEntity> findAllBywbId(String wbId);
 
-    @Query(value = "{'data.index':?0},'wbId':?1}")
+    @Query(value = "{'data.index':?0,'wbId':?1}")
     WorkSheetEntity findByindexAndwbId(String index,String wbId);
 
 
-    @Query(value = "{'data.status':?0},'wbId':?1}")
+    @Query(value = "{'data.status':?0,'wbId':?1}")
     WorkSheetEntity findBystatusAndwbId(int status,String wbId);
 
 
