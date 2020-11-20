@@ -51,8 +51,8 @@ public class IndexController {
         wb.setOption(SheetUtil.getDefautOption());
         WorkBookEntity saveWb = workBookRepository.save(wb);
         //生成sheet数据
-        generateSheet(wb.getId());
-        response.sendRedirect("/index/" + wb.getId());
+        generateSheet(saveWb.getId());
+        response.sendRedirect("/index/" + saveWb.getId());
     }
 
 
