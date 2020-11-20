@@ -47,14 +47,12 @@ public class IndexController {
     @GetMapping("index/create")
     public void create(HttpServletRequest request, HttpServletResponse response) throws IOException {
         WorkBookEntity wb = new WorkBookEntity();
-        String wbId = IdUtil.simpleUUID();
-        wb.setId(wbId);
         wb.setName("default");
         wb.setOption(SheetUtil.getDefautOption());
-        workBookRepository.save(wb);
+        WorkBookEntity saveWb = workBookRepository.save(wb);
         //生成sheet数据
-        generateSheet(wbId);
-        response.sendRedirect("/index/" + wbId);
+        generateSheet(wb.getId());
+        response.sendRedirect("/index/" + wb.getId());
     }
 
 
@@ -106,7 +104,6 @@ public class IndexController {
     private void generateSheet(String wbId) {
         SheetUtil.getDefaultSheetData().forEach(jsonObject -> {
             WorkSheetEntity ws = new WorkSheetEntity();
-            ws.setId(IdUtil.simpleUUID());
             ws.setWbId(wbId);
             ws.setData(jsonObject);
             ws.setDeleteStatus(0);
