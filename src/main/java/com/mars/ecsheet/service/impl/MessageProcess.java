@@ -1,5 +1,6 @@
 package com.mars.ecsheet.service.impl;
 
+import cn.hutool.core.util.EscapeUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
@@ -257,10 +258,14 @@ public class MessageProcess implements IMessageProcess {
      * @return
      */
     private WorkSheetEntity allRefresh(WorkSheetEntity ws, JSONObject message) {
-        if (message.getJSONObject("v").isEmpty()) {
+        String temp = message.getStr("v");
+        if (temp.isEmpty()) {
             ws.getData().remove(message.getStr("k"));
         } else {
-            ws.getData().put(message.getStr("k"), message.getJSONObject("v"));
+            if(JSONUtil.isJson(temp)){
+                ws.getData().put(message.getStr("k"), message.getJSONObject("v"));
+            }
+            ws.getData().put(message.getStr("k"), temp);
         }
         return ws;
     }
