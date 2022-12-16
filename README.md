@@ -16,7 +16,7 @@
 > 🚀Luckysheet is an online spreadsheet like excel that is powerful, simple to configure, and completely open source.
 
 ------
-## 演示地址: [点击访问](http://mars.free.idcfengye.com/index)
+## 演示地址: [点击访问](http://ecsheet.szxctech.cn/index)
 
 
 ## QuickStart
